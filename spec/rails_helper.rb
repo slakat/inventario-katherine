@@ -26,4 +26,7 @@ RSpec.configure do |config|
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
   config.infer_spec_type_from_file_location!
+
+  # You can call `create(:user)` instead of `FactoryGirl.create(:user)`
+  config.include FactoryGirl::Syntax::Methods
 end

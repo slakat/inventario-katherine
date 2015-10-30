@@ -23,12 +23,12 @@ group :development, :test do
   gem 'spring'
   gem 'spring-commands-rspec'
   gem 'spring-commands-cucumber'
+  gem 'factory_girl_rails' # `rails g model` generates factories
 end
 
 group :test do
   gem 'rspec-rails'
   gem 'rspec-set'
-  gem 'factory_girl_rails'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'capybara-screenshot'
