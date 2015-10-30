@@ -3,6 +3,8 @@ SimpleCov.start
 
 require 'cucumber/rails'
 
+require 'capybara-screenshot/cucumber'
+
 require 'sidekiq/testing'
 Sidekiq::Testing.inline!
 
