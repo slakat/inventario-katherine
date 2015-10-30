@@ -15,6 +15,7 @@ gem 'virtus'
 gem 'schema_auto_foreign_keys'
 gem 'bootstrap-sass'
 gem 'sidekiq', '~> 3.5'
+gem 'sinatra' # for sidekiq dashboard
 
 group :development, :test do
   gem 'byebug'
