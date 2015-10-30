@@ -1,16 +1,11 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  root 'home#index'
 
   devise_for :users
 
-  get '/styleguide', to: "styleguide#show"
-
-  mount Sidekiq::Web => (ENV['SIDEKIQ_PATH'] || '/sidekiq')
-
   # Examples:
-  #
-  # root 'welcome#index'
   #
   # resources :products do
   #   member do
@@ -24,4 +19,8 @@ Rails.application.routes.draw do
   #
   #   resources :comments, :sales
   # end
+
+  get '/styleguide', to: "styleguide#show"
+
+  mount Sidekiq::Web => (ENV['SIDEKIQ_PATH'] || '/sidekiq')
 end
