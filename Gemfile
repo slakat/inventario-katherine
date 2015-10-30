@@ -55,3 +55,12 @@ gem 'virtus'
 gem 'schema_plus'
 gem 'bootstrap-sass'
 gem 'flutie'
+group :development do
+  gem 'spring-commands-rspec'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'rspec-set'
+  gem 'factory_girl_rails'
+end
