@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+app_name = ARGV[0]
+
+unless app_name
+  puts "Usage: ./bootstrap app-name"
+  exit -1
+end
+
+dash_name = app_name.tr('_', '-')
+underscore_name = app_name.tr('-', '_')
+human_name = underscore_name.split('_').map(&:capitalize).join(' ')
+camelcased_name = human_name.delete(' ')
+
+def run(cmd)
+  puts cmd
+  system(cmd) or exit -1
+end
+
+def replace(old_str, new_str)
+  run %|perl -p -i -e "s/#{old_str}/#{new_str}/g" README.md app/views/*/* config/*|
+end
+
+run %|mv README-TEMPLATE.md README.md|
+
+replace "brewhouse-rails-template", dash_name
+replace "brewhouse_rails_template", underscore_name
+replace "Brewhouse Rails Template", human_name
+replace "BrewhouseRailsTemplate",   camelcased_name
+
+run %|rm bootstrap|
+run %|git add --all . && git commit -m "Bootstrap #{human_name}"|
