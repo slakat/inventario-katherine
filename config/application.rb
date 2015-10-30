@@ -40,5 +40,8 @@ module BrewhouseRailsTemplate
       g.javascripts false
       g.stylesheets false
     end
+
+    # Compresses http responses at runtime
+    config.middleware.use Rack::Deflater
   end
 end
