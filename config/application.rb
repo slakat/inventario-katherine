@@ -33,5 +33,12 @@ module BrewhouseRailsTemplate
     config.active_record.raise_in_transactional_callbacks = true
 
     config.active_job.queue_adapter = :sidekiq
+
+    config.generators do |g|
+      g.test_framework :rspec
+      g.helper false
+      g.javascripts false
+      g.stylesheets false
+    end
   end
 end
