@@ -20,6 +20,7 @@ gem 'sidekiq', '~> 3.5'
 gem 'sinatra' # for sidekiq dashboard
 
 gem 'rollbar'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'byebug'
