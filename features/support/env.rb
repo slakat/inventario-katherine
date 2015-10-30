@@ -3,6 +3,9 @@ SimpleCov.start
 
 require 'cucumber/rails'
 
+require 'sidekiq/testing'
+Sidekiq::Testing.inline!
+
 # Capybara defaults to CSS3 selectors rather than XPath.
 # Capybara.default_selector = :xpath
 

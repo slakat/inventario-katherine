@@ -9,13 +9,14 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 
 require 'spec_helper'
 require 'rspec/rails'
-
-# Add additional requires below this line. Rails is not loaded until this point!
+require 'sidekiq/testing'
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 # Checks for pending migrations before tests are run.
 ActiveRecord::Migration.maintain_test_schema!
+
+Sidekiq::Testing.inline!
 
 RSpec.configure do |config|
   # Run each example within a SQL transaction
