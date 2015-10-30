@@ -1,0 +1,10 @@
+general:
+  artifacts:
+    - "coverage"
+    - "tmp/capybara"
+deployment:
+  production:
+    branch: master
+    commands:
+      - git push git@heroku.com:brewhouse-rails-template.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rake db:migrate --app brewhouse-rails-template
