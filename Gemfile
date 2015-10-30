@@ -12,7 +12,7 @@ gem 'turbolinks'
 gem 'devise'
 gem 'simple_form'
 gem 'virtus'
-gem 'schema_plus'
+gem 'schema_auto_foreign_keys'
 gem 'bootstrap-sass'
 
 group :development, :test do
