@@ -14,7 +14,6 @@ gem 'simple_form'
 gem 'virtus'
 gem 'schema_plus'
 gem 'bootstrap-sass'
-gem 'flutie'
 
 group :development, :test do
   gem 'byebug'
