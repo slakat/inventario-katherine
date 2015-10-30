@@ -75,3 +75,7 @@ end
 group :development, :test do
   gem 'spring-commands-cucumber'
 end
+
+group :test do
+  gem 'simplecov', require: false
+end
