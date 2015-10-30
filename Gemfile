@@ -19,6 +19,8 @@ gem 'bootstrap-sass'
 gem 'sidekiq', '~> 3.5'
 gem 'sinatra' # for sidekiq dashboard
 
+gem 'rollbar'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
