@@ -5,7 +5,7 @@ CI](https://circleci.com/gh/BrewhouseTeam/brewhouse-rails-template.svg?style=svg
 [![Dependency
 Status](https://gemnasium.com/BrewhouseTeam/brewhouse-rails-template.svg)](https://gemnasium.com/BrewhouseTeam/brewhouse-rails-template)
 
-Let's bootstrap rails apps with default gems and good configuration.
+This is the base Rails app used at [Brewhouse](http://brewhouse.io).
 
 ## Usage
 
