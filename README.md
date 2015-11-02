@@ -2,6 +2,8 @@
 
 [![Circle
 CI](https://circleci.com/gh/BrewhouseTeam/brewhouse-rails-template.svg?style=svg)](https://circleci.com/gh/BrewhouseTeam/brewhouse-rails-template)
+[![Dependency
+Status](https://gemnasium.com/BrewhouseTeam/brewhouse-rails-template.svg)](https://gemnasium.com/BrewhouseTeam/brewhouse-rails-template)
 
 Let's bootstrap rails apps with default gems and good configuration.
 
