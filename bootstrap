@@ -17,16 +17,34 @@ def run(cmd)
   system(cmd) or exit -1
 end
 
-def replace(old_str, new_str)
-  run %|perl -p -i -e "s/#{old_str}/#{new_str}/g" README.md app/views/*/* config/*|
+def replace(changes)
+  puts "Replacing #{changes.map { |from, to| %|"#{from} with "#{to}"| }.join(', ')}"
+  Dir['**/*'].each do |file|
+    next if File.directory?(file)
+
+    content = File.read(file)
+    new_content = changes.inject(content) do |content, change|
+      from, to = change
+      content.gsub(from, to)
+    end
+    if content != new_content
+      File.open(file, 'w') do |f|
+        f.puts new_content
+      end
+    end
+  end
 end
 
 run %|mv README-TEMPLATE.md README.md|
 
-replace "brewhouse-rails-template", snake_name
-replace "brewhouse_rails_template", underscore_name
-replace "Brewhouse Rails Template", human_name
-replace "BrewhouseRailsTemplate",   camelcased_name
+replace(
+  "brewhouse-rails-template" => snake_name,
+  "brewhouse_rails_template" => underscore_name,
+  "Brewhouse Rails Template" => human_name,
+  "BrewhouseRailsTemplate"   => camelcased_name,
+)
 
-run %|rm bootstrap|
+run %|rm bootstrap| # self destruct!
 run %|git add --all . && git commit -m "Bootstrap #{human_name}"|
+
+puts "#{human_name} is ready! Happy coding!"
