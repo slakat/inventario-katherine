@@ -7,7 +7,7 @@ unless app_name
   exit -1
 end
 
-dash_name = app_name.tr('_', '-')
+snake_name = app_name.tr('_', '-')
 underscore_name = app_name.tr('-', '_')
 human_name = underscore_name.split('_').map(&:capitalize).join(' ')
 camelcased_name = human_name.delete(' ')
@@ -23,7 +23,7 @@ end
 
 run %|mv README-TEMPLATE.md README.md|
 
-replace "brewhouse-rails-template", dash_name
+replace "brewhouse-rails-template", snake_name
 replace "brewhouse_rails_template", underscore_name
 replace "Brewhouse Rails Template", human_name
 replace "BrewhouseRailsTemplate",   camelcased_name
