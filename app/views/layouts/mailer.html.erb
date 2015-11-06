@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    <% # Inject content of `mailer.scss`. Styles will be inlined by Roadie. %>
+    <%= Rails.application.assets["mailer.scss"].to_s %>
+  </style>
+</head>
+<body>
+
+  <%= yield %>
+
+</body>
+</html>
