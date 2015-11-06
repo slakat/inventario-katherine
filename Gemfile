@@ -23,6 +23,8 @@ gem 'roadie-rails', '~> 1.0'
 gem 'rollbar'
 gem 'newrelic_rpm'
 
+gem 'dotenv-rails'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
