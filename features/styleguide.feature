@@ -1,7 +1,7 @@
 Feature: Styleguide
 
   As a designer
-  In order to design nice styles
+  In order to design coherent user interface components
   I want to see a styleguide
 
   Scenario: Display Styleguide
