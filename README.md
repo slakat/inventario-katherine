@@ -56,8 +56,8 @@ rails app we work on.
 ### Production
 
 * `puma` 'cause it's fast
-* `rails_12factor` to run the app on heroku
+* `rails_12factor` to run the app on Heroku
 * `heroku-deflater` to compress assets
 * `rollbar` to get notified about errors
 * `newrelic_rpm` to monitor performances
-
+* `app.json` will setup add-ons, environment variables and run migrations when you deploy to Heroku
