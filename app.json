@@ -7,7 +7,7 @@
   "repository": "https://github.com/BrewhouseTeam/brewhouse-rails-template",
   "success_url": "/",
   "scripts": {
-    "postdeploy": "bundle exec rake db:migrate"
+    "postdeploy": "bundle exec rake db:migrate db:seed"
   },
   "env": {
     "SECRET_TOKEN": {
