@@ -16,7 +16,7 @@ gem 'simple_form'
 gem 'virtus'
 gem 'schema_auto_foreign_keys'
 gem 'bootstrap-sass'
-gem 'sidekiq', '~> 3.5'
+gem 'sidekiq', '~> 4.0'
 gem 'sinatra' # for sidekiq dashboard
 gem 'roadie-rails', '~> 1.0'
 
