@@ -1,0 +1,33 @@
+{
+  "name": "Brewhouse Rails Template",
+  "description": "Rails 4.2 app for Brewhouse Rails Template",
+  "keywords": [
+    "rails"
+  ],
+  "repository": "https://github.com/BrewhouseTeam/brewhouse-rails-template",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate db:seed"
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "HOST": "brewhouse-rails-template.herokuapp.com",
+    "PROTOCOL": "https",
+    "RAILS_ENV": "production",
+    "RACK_ENV": "production",
+    "RAILS_SERVE_STATIC_FILES": "true"
+  },
+  "image": "heroku/ruby",
+  "addons": [
+    "heroku-postgresql:hobby-dev",
+    "papertrail:choklad",
+    "newrelic:wayne",
+    "heroku-redis:hobby-dev",
+    "sendgrid:starter",
+    "rollbar:free"
+  ],
+  "buildpacks": []
+}

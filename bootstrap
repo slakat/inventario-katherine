@@ -19,7 +19,7 @@ end
 
 def replace(changes)
   puts "Replacing #{changes.map { |from, to| %|"#{from} with "#{to}"| }.join(', ')}"
-  Dir['**/*', '.env*'].each do |file|
+  Dir["**/*", ".env*", "app.json"].each do |file|
     next if File.directory?(file)
 
     content = File.read(file)
