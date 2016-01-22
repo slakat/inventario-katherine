@@ -44,7 +44,7 @@ rails app we work on.
 * `dotenv-rails` to store config and secrets in env variables
 * `letter_opener` to open emails in the browser in dev env
 * `factory_girl`
-* `spring1 bin-stubs in `./bin` (ProTip: Add `./bin` to your `$PATH`)
+* `spring` bin-stubs in `./bin` (ProTip: Add `./bin` to your `$PATH`)
 
 ### Test
 
