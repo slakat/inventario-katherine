@@ -1,63 +1,43 @@
-# Brewhouse Rails Template
+# Inventario
 
-[![Circle
-CI](https://circleci.com/gh/BrewhouseTeam/brewhouse-rails-template.svg?style=svg)](https://circleci.com/gh/BrewhouseTeam/brewhouse-rails-template)
-[![Dependency
-Status](https://gemnasium.com/BrewhouseTeam/brewhouse-rails-template.svg)](https://gemnasium.com/BrewhouseTeam/brewhouse-rails-template)
+This is a Rails 4 application.
 
-This is the base Rails app used at [Brewhouse](http://brewhouse.io).
+## Get up and running
 
-## Usage
+### Dependencies
 
-Assuming you want to create "my-rails-app":
+You'll need:
 
-1 - Clone this repo:
+- Postgresql
+- Ruby 2.2+
+- bundler (`gem install bundler`)
+- Redis (`brew install redis`) - for `sidekiq`
+- qt (`brew install qt`) - for `capybara-webkit`
+
+### Bootstrap your dev env
+
 ```
-git clone git@github.com:BrewhouseTeam/brewhouse-rails-template.git my-rails-app
+bundle
+rake db:create db:migrate db:seed
 ```
 
-2 - Bootstrap your app (prepare config files etc...):
+## Run the tests
+
 ```
-cd my-rails-app && ./bootstrap my-rails-app
+RAILS_ENV=test rake db:create db:migrate
+rspec && cucumber
 ```
 
-## What's in there?
+## Run local environment
 
-You'll find the gems and configuration niceties that we use on most
-rails app we work on.
+Assuming you use [pow](http://pow.cx), your app should live at
+http://inventario.dev.
 
-### The basics
+You should run `sidekiq` to perform background jobs.
 
-* `devise` with a `User` model setup and mailer previews available at
-  `/rails/mailers`
-* `simple_form` setup for bootstrap 3
-* `virtus` for building services (see `app/services/service.rb`)
-* `schema_auto_foreign_keys` for a robust data layer where orphan
-  records are not a thing.
-* `sidekiq` with dashboard at `/sidekiq`
-* `bootstrap-sass` with a couple of defaults in `app/assets/styelsheets/_variables.scss`
-* `roadie-rails` to inline css in emails so that GMail picks up the
-  styles.
+## Deployment
 
-### Dev env
+Circle-CI deploys the master branch when it passes to https://inventario.herokuapp.com
 
-* `dotenv-rails` to store config and secrets in env variables
-* `letter_opener` to open emails in the browser in dev env
-* `factory_girl`
-* `spring` bin-stubs in `./bin` (ProTip: Add `./bin` to your `$PATH`)
+Feel free to update the default heroku configuration in `app.json`.
 
-### Test
-
-* `rspec` for unit testing
-* `cucumber` with `capybara-webkit` and `capybara-screenshot` for
-  integration tests
-* `simplecov` because test coverage matters
-
-### Production
-
-* `puma` 'cause it's fast
-* `rails_12factor` to run the app on Heroku
-* `heroku-deflater` to compress assets
-* `rollbar` to get notified about errors
-* `newrelic_rpm` to monitor performances
-* `app.json` will setup add-ons, environment variables and run migrations when you deploy to Heroku

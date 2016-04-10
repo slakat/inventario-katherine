@@ -1,10 +1,10 @@
 {
-  "name": "Brewhouse Rails Template",
-  "description": "Rails 4.2 app for Brewhouse Rails Template",
+  "name": "Inventario",
+  "description": "Rails 4.2 app for Inventario",
   "keywords": [
     "rails"
   ],
-  "repository": "https://github.com/BrewhouseTeam/brewhouse-rails-template",
+  "repository": "https://github.com/BrewhouseTeam/inventario",
   "success_url": "/",
   "scripts": {
     "postdeploy": "bundle exec rake db:migrate db:seed"
@@ -14,7 +14,7 @@
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
     },
-    "HOST": "brewhouse-rails-template.herokuapp.com",
+    "HOST": "inventario.herokuapp.com",
     "PROTOCOL": "https",
     "RAILS_ENV": "production",
     "RACK_ENV": "production",

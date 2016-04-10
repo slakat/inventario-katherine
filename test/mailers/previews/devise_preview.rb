@@ -1,4 +1,4 @@
-# Available at: http://brewhouse-rails-template.dev/rails/mailers
+# Available at: http://inventario.dev/rails/mailers
 class DevisePreview < ActionMailer::Preview
   def reset_password_instructions
     CustomDeviseMailer.reset_password_instructions(user, token)

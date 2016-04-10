@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'Brewhouse Rails Template <support@brewhouse-rails-template.com>'
+  default from: 'Inventario <support@inventario.com>'
   layout 'mailer'
 
   include Roadie::Rails::Automatic

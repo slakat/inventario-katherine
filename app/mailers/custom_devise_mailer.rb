@@ -1,4 +1,4 @@
-# Previews available at: http://brewhouse-rails-template.dev/rails/mailers
+# Previews available at: http://inventario.dev/rails/mailers
 # Code is at /test/mailers/previews/devise_preview.rb
 class CustomDeviseMailer < Devise::Mailer
   helper :application # gives access to all helpers defined within `application_helper`.
