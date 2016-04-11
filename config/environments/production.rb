@@ -76,10 +76,7 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
-  config.action_mailer.default_url_options = {
-    host: ENV.fetch('HOST'),
-    protocol: ENV.fetch('PROTOCOL')
-  }
+  config.action_mailer.delivery_method = :smtp
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
