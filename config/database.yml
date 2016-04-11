@@ -4,8 +4,11 @@ default: &default
   pool: 5
 
 development:
-  <<: *default
+  adapter: mysql2
+  host: localhost
   database: inventario_development
+  username: inv_user
+  password: development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
