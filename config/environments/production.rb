@@ -67,12 +67,12 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
   ActionMailer::Base.smtp_settings = {
-    :address        => 'smtp.sendgrid.net',
+    :address        => 'smtp.gmail.com',
     :port           => '587',
     :authentication => :plain,
-    :user_name      => ENV.fetch('SENDGRID_USERNAME'),
-    :password       => ENV.fetch('SENDGRID_PASSWORD'),
-    :domain         => 'heroku.com',
+    :domain         => 'gmail.com',
+    :user_name      => ENV.fetch('GMAIL_USERNAME'),
+    :password       => ENV.fetch('GMAIL_PASSWORD'),
     :enable_starttls_auto => true
   }
 
