@@ -1,0 +1,6 @@
+= simple_form_for(@transaction) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :total
+  .form-actions
+    = f.button :submit

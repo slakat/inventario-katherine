@@ -1,0 +1,7 @@
+%p#notice= notice
+%p
+  %strong Total:
+  = @transaction.total
+= link_to 'Edit', edit_transaction_path(@transaction)
+|
+= link_to 'Back', transactions_path

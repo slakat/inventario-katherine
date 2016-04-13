@@ -24,6 +24,8 @@ gem 'newrelic_rpm'
 
 gem 'dotenv-rails'
 
+gem 'haml-rails'
+
 group :development do
   gem 'letter_opener'
   gem 'web-console', '~> 2.0'

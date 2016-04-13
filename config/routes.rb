@@ -1,6 +1,11 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  resources :transactions
+  resources :categories
+  resources :formulas
+  resources :products
+  resources :services
   root 'home#index'
 
   devise_for :users

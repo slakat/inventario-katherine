@@ -1,0 +1,9 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    :css
+      <haml_silent>     # Inject content of `mailer.scss`. Styles will be inlined by Roadie. 
+      </haml_silent>    #{Rails.application.assets["mailer.scss"].to_s}
+  %body
+    = yield

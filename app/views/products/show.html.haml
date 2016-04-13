@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Nature:
+  = @product.nature
+%p
+  %strong Cost:
+  = @product.cost
+%p
+  %strong Price:
+  = @product.price
+%p
+  %strong State:
+  = @product.state
+= link_to 'Edit', edit_product_path(@product)
+|
+= link_to 'Back', products_path
