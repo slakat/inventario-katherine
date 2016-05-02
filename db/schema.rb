@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20160413165506) do
     t.integer  "cost",       limit: 4
     t.integer  "price",      limit: 4
     t.string   "state",      limit: 255
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 20160413165506) do
 
   create_table "transactions", force: :cascade do |t|
     t.integer  "total",      limit: 4
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "transaction_services", force: :cascade do |t|

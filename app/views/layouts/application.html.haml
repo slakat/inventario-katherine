@@ -10,8 +10,8 @@
     / Fonts and icons
     %link{:href => "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css", :rel => "stylesheet"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Roboto:400,700,300", :rel => "stylesheet", :type => "text/css"}/
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false
+    = javascript_include_tag 'application', 'data-turbolinks-track' => false
     = csrf_meta_tags
   %body
     .wrapper
@@ -22,40 +22,40 @@
         .sidebar-wrapper
           .logo
             %a.simple-text{:href => "http://www.creative-tim.com"}
-              Creative Tim
+              Inventario Katherine
           %ul.nav
             %li.active
-              %a{:href => "dashboard.html"}
+              %a{:href => root_path, data: {no_turbolink: false}}
                 %i.pe-7s-graph
                 %p Dashboard
             %li
-              %a{:href => "user.html"}
+              %a{:href => transactions_path}
                 %i.pe-7s-user
-                %p User Profile
+                %p Ventas
             %li
-              %a{:href => "table.html"}
+              %a{:href => products_path}
                 %i.pe-7s-note2
-                %p Table List
+                %p Productos
             %li
-              %a{:href => "typography.html"}
+              %a{:href => categories_path}
                 %i.pe-7s-news-paper
-                %p Typography
+                %p Categorías
             %li
-              %a{:href => "icons.html"}
+              %a{:href => formulas_path}
                 %i.pe-7s-science
-                %p Icons
+                %p Fórmulas
             %li
-              %a{:href => "maps.html"}
+              %a{:href => services_path}
                 %i.pe-7s-map-marker
-                %p Maps
+                %p Servicios
             %li
               %a{:href => "notifications.html"}
                 %i.pe-7s-bell
                 %p Notifications
             %li.active-pro
-              %a{:href => "upgrade.html"}
+              %a{:href => "#"}
                 %i.pe-7s-rocket
-                %p Upgrade to PRO
+                %p Informes
       .main-panel
         %nav.navbar.navbar-default.navbar-fixed
           .container-fluid
@@ -116,7 +116,8 @@
                   %a{:href => "#"}
                     Log out
         .content
-          = yield
+          .container-fluid
+            = yield
 
 
         %footer.footer
@@ -140,8 +141,6 @@
               = succeed "," do
                 %a{:href => "http://www.creative-tim.com"} Creative Tim
 
-  / Google Maps Plugin
-  %script{:src => "https://maps.googleapis.com/maps/api/js?sensor=false", :type => "text/javascript"}
 :javascript
     $(document).ready(function(){
 
@@ -155,5 +154,36 @@
                     type: 'info',
                     timer: 4000
                 });
+
+                $( "#dropdown" ).select2({
+                  theme: "bootstrap"
+              });
+              $('.datatable').DataTable({
+                // ajax: ...,
+                // autoWidth: false,
+                 responsive: true,
+                 pagingType: 'full_numbers',
+                // processing: true,
+                // serverSide: true,
+
+                // Optional, if you want full pagination controls.
+                // Check dataTables documentation to learn more about available options.
+                // http://datatables.net/reference/option/pagingType
+
+                "language": {
+                    "lengthMenu": "Muestra _MENU_ datos por página",
+                    "zeroRecords": "No hay información - ",
+                    "info": "Mostrando página _PAGE_ de _PAGES_",
+                    "infoEmpty": "No hay datos aún",
+                    "infoFiltered": "(filtrado desde _MAX_ datos totales)",
+                    "paginate": {
+                      "first": "Primero",
+                      "last": "Último",
+                      "next": "Siguiente",
+                      "previous": "Anterior"
+                      },
+                      "search": "Buscar:"
+                }
+              });
 
         	});

@@ -45,6 +45,6 @@ module Inventario
     config.middleware.use Rack::Deflater
 
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
-
+    config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .gif)
   end
 end

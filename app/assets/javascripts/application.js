@@ -12,12 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= #require turbolinks
 //= require jquery-1.10.2
+//= require select2-full
 //= require bootstrap.min
 //= require bootstrap-checkbox-radio-switch
 //= require chartist.min
 //= require bootstrap-notify
 //= require light-bootstrap-dashboard
+//= require dataTables/jquery.dataTables
+//= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+//= require dataTables/extras/dataTables.responsive
 //= require demo
 //= require_tree .
+
+
+$(document).ready(function(){
+
+
+
+});

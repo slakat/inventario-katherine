@@ -3,7 +3,7 @@ class CreateTransactions < ActiveRecord::Migration
     create_table :transactions do |t|
       t.integer :total
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
