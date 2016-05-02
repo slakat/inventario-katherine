@@ -29,6 +29,9 @@ gem 'haml-rails'
 gem 'jquery-datatables-rails', '~> 3.3.0'
 gem "select2-rails"
 
+gem "font-awesome-rails"
+
+
 
 group :development do
   gem 'letter_opener'

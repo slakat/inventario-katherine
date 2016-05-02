@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bce50b10-7d2f-4f36-8a99-54c5146524d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inventario.iml" afterPath="$PROJECT_DIR$/.idea/inventario.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.haml" afterPath="$PROJECT_DIR$/app/views/home/index.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/products/index.html.haml" afterPath="$PROJECT_DIR$/app/views/products/index.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/transactions/index.html.haml" afterPath="$PROJECT_DIR$/app/views/transactions/index.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20160413152406_create_products.rb" afterPath="$PROJECT_DIR$/db/migrate/20160413152406_create_products.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20160413155226_create_transactions.rb" afterPath="$PROJECT_DIR$/db/migrate/20160413155226_create_transactions.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="inventario.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +30,7 @@
     <SUITE FILE_PATH="coverage/inventario@db_migrate__inventario.coverage" NAME="db:migrate: inventario Coverage Results" MODIFIED="1462162983288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="inventario" />
     <SUITE FILE_PATH="coverage/inventario@db_create__inventario.coverage" NAME="db:create: inventario Coverage Results" MODIFIED="1462162966358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="inventario" />
     <SUITE FILE_PATH="coverage/inventario@db_drop__inventario.coverage" NAME="db:drop: inventario Coverage Results" MODIFIED="1462162897258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="inventario" />
-    <SUITE FILE_PATH="coverage/inventario@Development__inventario.coverage" NAME="Development: inventario Coverage Results" MODIFIED="1462161241222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="inventario" />
+    <SUITE FILE_PATH="coverage/inventario@Development__inventario.coverage" NAME="Development: inventario Coverage Results" MODIFIED="1462164538548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="inventario" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -53,20 +44,20 @@
       <file leaf-file-name="application.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.541667">
-              <caret line="184" column="39" selection-start-line="184" selection-start-column="39" selection-end-line="184" selection-end-column="39" />
+            <state vertical-scroll-proportion="-11.25">
+              <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
               <folding>
-                <marker date="1462162646000" expanded="true" signature="5333:5798" placeholder="{...}" />
-                <marker date="1462162646000" expanded="true" signature="5333:6919" placeholder="{...}" />
-                <marker date="1462162646000" expanded="true" signature="5393:5569" placeholder="{&quot;icon&quot;: 'pe-7s-gift'...}" />
-                <marker date="1462162646000" expanded="true" signature="5570:5655" placeholder="{&quot;type&quot;: 'info'...}" />
-                <marker date="1462162646000" expanded="true" signature="5700:5754" placeholder="{&quot;theme&quot;: &quot;bootstrap&quot;...}" />
-                <marker date="1462162646000" expanded="true" signature="5815:5865" placeholder="//..." />
-                <marker date="1462162646000" expanded="true" signature="5815:6019" placeholder="//..." />
-                <marker date="1462162646000" expanded="true" signature="5962:6019" placeholder="//..." />
-                <marker date="1462162646000" expanded="true" signature="6037:6245" placeholder="//..." />
-                <marker date="1462162646000" expanded="true" signature="6275:6889" placeholder="{&quot;lengthMenu&quot;: &quot;Muestra _MENU_ datos por página&quot;...}" />
-                <marker date="1462162646000" expanded="true" signature="6633:6828" placeholder="{&quot;first&quot;: &quot;Primero&quot;...}" />
+                <marker date="1462164235000" expanded="true" signature="5191:5656" placeholder="{...}" />
+                <marker date="1462164235000" expanded="true" signature="5191:6777" placeholder="{...}" />
+                <marker date="1462164235000" expanded="true" signature="5251:5427" placeholder="{&quot;icon&quot;: 'pe-7s-gift'...}" />
+                <marker date="1462164235000" expanded="true" signature="5428:5513" placeholder="{&quot;type&quot;: 'info'...}" />
+                <marker date="1462164235000" expanded="true" signature="5558:5612" placeholder="{&quot;theme&quot;: &quot;bootstrap&quot;...}" />
+                <marker date="1462164235000" expanded="true" signature="5673:5723" placeholder="//..." />
+                <marker date="1462164235000" expanded="true" signature="5673:5877" placeholder="//..." />
+                <marker date="1462164235000" expanded="true" signature="5820:5877" placeholder="//..." />
+                <marker date="1462164235000" expanded="true" signature="5895:6103" placeholder="//..." />
+                <marker date="1462164235000" expanded="true" signature="6133:6747" placeholder="{&quot;lengthMenu&quot;: &quot;Muestra _MENU_ datos por página&quot;...}" />
+                <marker date="1462164235000" expanded="true" signature="6491:6686" placeholder="{&quot;first&quot;: &quot;Primero&quot;...}" />
               </folding>
             </state>
           </provider>
@@ -82,11 +73,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/transactions/index.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.044444446">
+            <state vertical-scroll-proportion="-1.25">
               <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3440367">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -123,14 +134,15 @@
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.haml" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/views/products/index.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/db/migrate/20160413155226_create_transactions.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20160413152406_create_products.rb" />
         <option value="$PROJECT_DIR$/app/views/transactions/index.html.haml" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/fontawesome.css" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
       </list>
     </option>
   </component>
@@ -402,28 +414,6 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inventario" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="inventario" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -437,7 +427,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="gemfile&#9;FILE&#9;file:///Users/Katherine/github/inventario/Gemfile&#10;application.r&#9;FILE&#9;file:///Users/Katherine/github/inventario/config/application.rb&#10;production.rb&#9;FILE&#9;file:///Users/Katherine/github/inventario/config/environments/production.rb&#10;config/a&#9;FILE&#9;file:///Users/Katherine/github/inventario/config/application.rb&#10;appli&#9;FILE&#9;file:///Users/Katherine/github/inventario/app/controllers/application_controller.rb&#10;database&#9;FILE&#9;file:///Users/Katherine/github/inventario/config/database.yml" />
+    <property name="SearchEverywhereHistoryKey" value="gem&#9;FILE&#9;file:///Users/Katherine/github/inventario/Gemfile&#10;gemfile&#9;FILE&#9;file:///Users/Katherine/github/inventario/Gemfile&#10;application.r&#9;FILE&#9;file:///Users/Katherine/github/inventario/config/application.rb&#10;production.rb&#9;FILE&#9;file:///Users/Katherine/github/inventario/config/environments/production.rb&#10;config/a&#9;FILE&#9;file:///Users/Katherine/github/inventario/config/application.rb&#10;appli&#9;FILE&#9;file:///Users/Katherine/github/inventario/app/controllers/application_controller.rb&#10;database&#9;FILE&#9;file:///Users/Katherine/github/inventario/config/database.yml" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="true" />
     <property name="FullScreen" value="true" />
@@ -782,7 +772,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -790,7 +780,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.52100164" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.4789984" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.4789984" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5089409" sideWeight="0.4838449" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -817,17 +807,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           <folding>
-            <marker date="1462162646000" expanded="true" signature="5333:5798" placeholder="{...}" />
-            <marker date="1462162646000" expanded="true" signature="5333:6919" placeholder="{...}" />
-            <marker date="1462162646000" expanded="true" signature="5393:5569" placeholder="{&quot;icon&quot;: 'pe-7s-gift'...}" />
-            <marker date="1462162646000" expanded="true" signature="5570:5655" placeholder="{&quot;type&quot;: 'info'...}" />
-            <marker date="1462162646000" expanded="true" signature="5700:5754" placeholder="{&quot;theme&quot;: &quot;bootstrap&quot;...}" />
-            <marker date="1462162646000" expanded="true" signature="5815:5865" placeholder="//..." />
-            <marker date="1462162646000" expanded="true" signature="5815:6019" placeholder="//..." />
-            <marker date="1462162646000" expanded="true" signature="5962:6019" placeholder="//..." />
-            <marker date="1462162646000" expanded="true" signature="6037:6245" placeholder="//..." />
-            <marker date="1462162646000" expanded="true" signature="6275:6889" placeholder="{&quot;lengthMenu&quot;: &quot;Muestra _MENU_ datos por página&quot;...}" />
-            <marker date="1462162646000" expanded="true" signature="6633:6828" placeholder="{&quot;first&quot;: &quot;Primero&quot;...}" />
+            <marker date="1462164235000" expanded="true" signature="5191:5656" placeholder="{...}" />
+            <marker date="1462164235000" expanded="true" signature="5191:6777" placeholder="{...}" />
+            <marker date="1462164235000" expanded="true" signature="5251:5427" placeholder="{&quot;icon&quot;: 'pe-7s-gift'...}" />
+            <marker date="1462164235000" expanded="true" signature="5428:5513" placeholder="{&quot;type&quot;: 'info'...}" />
+            <marker date="1462164235000" expanded="true" signature="5558:5612" placeholder="{&quot;theme&quot;: &quot;bootstrap&quot;...}" />
+            <marker date="1462164235000" expanded="true" signature="5673:5723" placeholder="//..." />
+            <marker date="1462164235000" expanded="true" signature="5673:5877" placeholder="//..." />
+            <marker date="1462164235000" expanded="true" signature="5820:5877" placeholder="//..." />
+            <marker date="1462164235000" expanded="true" signature="5895:6103" placeholder="//..." />
+            <marker date="1462164235000" expanded="true" signature="6133:6747" placeholder="{&quot;lengthMenu&quot;: &quot;Muestra _MENU_ datos por página&quot;...}" />
+            <marker date="1462164235000" expanded="true" signature="6491:6686" placeholder="{&quot;first&quot;: &quot;Primero&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -1146,46 +1136,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.541667">
-          <caret line="184" column="39" selection-start-line="184" selection-start-column="39" selection-end-line="184" selection-end-column="39" />
-          <folding>
-            <marker date="1462162646000" expanded="true" signature="5333:5798" placeholder="{...}" />
-            <marker date="1462162646000" expanded="true" signature="5333:6919" placeholder="{...}" />
-            <marker date="1462162646000" expanded="true" signature="5393:5569" placeholder="{&quot;icon&quot;: 'pe-7s-gift'...}" />
-            <marker date="1462162646000" expanded="true" signature="5570:5655" placeholder="{&quot;type&quot;: 'info'...}" />
-            <marker date="1462162646000" expanded="true" signature="5700:5754" placeholder="{&quot;theme&quot;: &quot;bootstrap&quot;...}" />
-            <marker date="1462162646000" expanded="true" signature="5815:5865" placeholder="//..." />
-            <marker date="1462162646000" expanded="true" signature="5815:6019" placeholder="//..." />
-            <marker date="1462162646000" expanded="true" signature="5962:6019" placeholder="//..." />
-            <marker date="1462162646000" expanded="true" signature="6037:6245" placeholder="//..." />
-            <marker date="1462162646000" expanded="true" signature="6275:6889" placeholder="{&quot;lengthMenu&quot;: &quot;Muestra _MENU_ datos por página&quot;...}" />
-            <marker date="1462162646000" expanded="true" signature="6633:6828" placeholder="{&quot;first&quot;: &quot;Primero&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30963302">
-          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51086956">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84782606">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1200,8 +1154,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/transactions/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.044444446">
+        <state vertical-scroll-proportion="-1.25">
           <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+          <folding>
+            <marker date="1462164235000" expanded="true" signature="5191:5656" placeholder="{...}" />
+            <marker date="1462164235000" expanded="true" signature="5191:6777" placeholder="{...}" />
+            <marker date="1462164235000" expanded="true" signature="5251:5427" placeholder="{&quot;icon&quot;: 'pe-7s-gift'...}" />
+            <marker date="1462164235000" expanded="true" signature="5428:5513" placeholder="{&quot;type&quot;: 'info'...}" />
+            <marker date="1462164235000" expanded="true" signature="5558:5612" placeholder="{&quot;theme&quot;: &quot;bootstrap&quot;...}" />
+            <marker date="1462164235000" expanded="true" signature="5673:5723" placeholder="//..." />
+            <marker date="1462164235000" expanded="true" signature="5673:5877" placeholder="//..." />
+            <marker date="1462164235000" expanded="true" signature="5820:5877" placeholder="//..." />
+            <marker date="1462164235000" expanded="true" signature="5895:6103" placeholder="//..." />
+            <marker date="1462164235000" expanded="true" signature="6133:6747" placeholder="{&quot;lengthMenu&quot;: &quot;Muestra _MENU_ datos por página&quot;...}" />
+            <marker date="1462164235000" expanded="true" signature="6491:6686" placeholder="{&quot;first&quot;: &quot;Primero&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3440367">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding />
         </state>
       </provider>
