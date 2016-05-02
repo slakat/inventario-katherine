@@ -43,5 +43,8 @@ module Inventario
 
     # Compresses http responses at runtime
     config.middleware.use Rack::Deflater
+
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
   end
 end
