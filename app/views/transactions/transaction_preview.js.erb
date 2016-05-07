@@ -1,0 +1,3 @@
+$('#transaction-preview').html("<%= escape_javascript render(:partial => 'transactions/transaction_preview', :locals => { :transaction => @transaction}) %>");
+
+$('#transaction-preview-btn').click();

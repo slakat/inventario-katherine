@@ -1,0 +1,3 @@
+$('#transaction-details').html("<%= escape_javascript render(:partial => 'transactions/transaction_details', :locals => { :products => @products , :services => @services,  :extras => @extras }) %>");
+
+$('#transaction-details-btn').click();

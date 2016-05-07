@@ -1,9 +1,9 @@
-class ProductsController < ApplicationController
+class ExtraProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
   def index
-    @products = Product.all
+    @products = ExtraProduct.all
     respond_to do |format|
       format.html
       format.json{
@@ -12,12 +12,8 @@ class ProductsController < ApplicationController
       end
   end
 
-  def product_price
-    price = Product.find(params[:id]).calculate_price(params[:units].to_i)
-    render json: price.as_json
-  end
   def extra_price
-    price = Product.find(params[:id]).calculate_price_extra(params[:percentage].to_i)
+    price = ExtraProduct.find(params[:id]).calculate_price_extra(params[:percentage].to_i)
     render json: price.as_json
   end
 
@@ -27,7 +23,7 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
-    @product = Product.new
+    @product = ExtraProduct.new
   end
 
   # GET /products/1/edit
@@ -36,7 +32,7 @@ class ProductsController < ApplicationController
 
   # POST /products
   def create
-    @product = Product.new(product_params)
+    @product = ExtraProduct.new(product_params)
 
     if @product.save
       redirect_to @product, notice: 'Product was successfully created.'
@@ -57,17 +53,17 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   def destroy
     @product.destroy
-    redirect_to products_url, notice: 'Product was successfully destroyed.'
+    redirect_to extra_products_url, notice: 'Product was successfully destroyed.'
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.find(params[:id])
+      @product = ExtraProduct.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def product_params
-      params.require(:product).permit(:nature, :cost, :price, :state)
+      params.require(:extra_product).permit(:nature,:quantity,:name, :cost, :price, :state, :product_id, :code)
     end
 end

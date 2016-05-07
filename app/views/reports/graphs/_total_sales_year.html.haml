@@ -1,0 +1,66 @@
+.col-md-6
+  .card
+    .header
+      %h4.title= "Ventas #{Date.today.year}"
+      %p.category Plata recaudada con todos los productos
+    .content
+      #chartActivity2.ct-chart
+      .footer
+        %hr/
+        .stats
+          %i.fa.fa-check
+          Datos de las transacciones
+
+:javascript
+  $('#chartActivity2').highcharts({
+    chart: {
+      type: 'area'
+    },
+   credits:{
+            text: '',
+            href: '',
+            display:'none'
+          },
+    title: {
+      text: 'Ventas del año'
+    },
+    subtitle: {
+      text: 'Plata en miles de pesos (25 = $25.000)'
+    },
+    xAxis: {
+      categories: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+      tickmarkPlacement: 'on',
+      title: {
+        enabled: false
+      }
+    },
+    yAxis: {
+      title: {
+        text: '$ en miles CLP'
+      },
+      labels: {
+        formatter: function () {
+          return this.value / 1000 ;
+        }
+      }
+    },
+    tooltip: {
+      shared: true,
+      valueSuffix: ' CLP'
+    },
+    plotOptions: {
+      area: {
+        stacking: 'normal',
+        lineColor: '#666666',
+        lineWidth: 1,
+        marker: {
+          lineWidth: 1,
+          lineColor: '#666666'
+        }
+      }
+    },
+    series: [{
+      name: 'Plata de ventas por mes',
+      data:  #{Transaction.array_total_months_this_year}
+    }]
+    });

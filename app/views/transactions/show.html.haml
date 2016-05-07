@@ -1,7 +1,69 @@
 %p#notice= notice
-%p
-  %strong Total:
-  = @transaction.total
-= link_to 'Edit', edit_transaction_path(@transaction)
+.row.card
+  .header
+    %h1.bg-success= "VENTA TOTAL: #{currency_cl @transaction.total}"
+
+  .content
+    .table-responsive
+      %table.table.responsive.no-wrap.table-striped
+        %thead
+          %tr
+            %th Producto
+            %th Cantidad
+            %th Precio
+          %tbody
+            -@transaction.transaction_products.each do |p|
+              %tr
+                %td= p.name
+                %td= p.quantity
+                %td= currency_cl p.price
+
+        %br/
+
+      %table.table.responsive.no-wrap.table-striped
+        %thead
+          %tr
+            %th Servicio
+            %th Precio
+          %tbody
+            -@transaction.transaction_services.each do |p|
+              %tr
+                %td= p.name
+                %td= currency_cl p.price
+
+        %br/
+
+      %table.table.responsive.no-wrap.table-striped
+        %thead
+          %tr
+            %th Producto Extra
+            %th Porcentaje Usado
+            %th Precio
+          %tbody
+            -@transaction.extras.each do |p|
+              %tr
+                %td= p.name
+                %td
+                  = p.quantity
+                  ="%"
+                %td= currency_cl p.price
+
+        %br/
+
+      %table.table.responsive.no-wrap.table-striped
+        %thead
+          %tr
+            %th Factura Total
+            %th
+
+          %tbody
+            %tr.success
+              %td
+                %h3 PRECIO TOTAL
+              %td
+                %h3= currency_cl @transaction.total
+
+        %br/
+= link_to 'Editar', edit_transaction_path(@transaction)
 |
-= link_to 'Back', transactions_path
+= link_to 'Volver', transactions_path

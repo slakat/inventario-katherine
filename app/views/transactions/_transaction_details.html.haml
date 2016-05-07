@@ -1,0 +1,104 @@
+.row.card
+  .header
+  .content
+    = simple_form_for(Transaction.new, method: 'post', url: '/transaction-preview', remote: true) do |f|
+
+      .table-responsive
+        %table.table.datatable.responsive.no-wrap.table-striped
+          %thead
+            %tr
+              %th Producto
+              %th Cantidad
+              %th Precio
+          %tbody
+            - products.each do |product|
+              =fields_for 'products[]', product do |p|
+                =p.hidden_field :product_id
+                %tr
+                  %td= p.text_field :name
+                  %td= p.number_field :quantity, 'data-label': "products-#{product.product_id}", 'data-id': product.product_id, min:1, max: product.product.quantity
+                  %td= p.number_field :price, :readonly => true, 'data-id': "products-#{product.product_id}"
+
+        %br/
+
+      .table-responsive
+        %table.table.datatable.responsive.no-wrap.table-striped
+          %thead
+            %tr
+              %th Servicio
+              %th Precio
+          %tbody
+            - services.each do |service|
+              =fields_for 'services[]', service do |s|
+                =s.hidden_field :service_id
+                %tr
+                  %td= s.text_field :name
+                  %td= s.number_field :price, :readonly => true
+
+        %br/
+
+      .table-responsive
+        %table.table.datatable.responsive.no-wrap.table-striped
+          %thead
+            %tr
+              %th Producto Extra
+              %th Cantidad %
+              %th Precio
+          %tbody
+            - extras.each do |extra|
+              =fields_for 'extras[]', extra do |e|
+                =e.hidden_field :extra_product_id
+                =e.hidden_field :cost
+                %tr
+                  %td= e.text_field :name
+                  %td= e.number_field :quantity, 'data-label': "extras-#{extra.extra_product_id}", 'data-id': extra.extra_product_id, min:1, max: 100, step: 2
+                  %td= e.number_field :price, :readonly => true, 'data-id': "extras-#{extra.extra_product_id}"
+
+        %br/
+
+      .form-actions
+        .pull-right
+          %input.btn.btn-next.btn-fill.btn-info.btn-wd.btn-sm{:name => "next", :type => "submit", :value => 'Visualizar Boleta', data: { disable_with: "enviando...".html_safe}}
+        .pull-left
+          %a.btn.btn-default.btn-previous{ :onClick => "$('#create-trasaction-btn').click()", class: 'text-center'} Atrás
+        .clearfix
+
+
+:javascript
+   $('input[name="products[][quantity]"]').change(function(){
+        var label = $(this).data('label');
+        var id = $(this).data('id');
+
+        $.ajax({
+          url: "/product-price",
+          type: "GET",
+          dataType: "json",
+          data: {
+              id: id, // search term
+              units: $(this).val()
+            },
+          success: function(data) {
+              $("input[data-id='"+label.toString()+"'][name='products[][price]']").val(data);
+              }
+
+          });
+       });
+
+       $('input[name="extras[][quantity]"]').change(function(){
+        var label = $(this).data('label');
+        var id = $(this).data('id');
+
+        $.ajax({
+          url: "/extra-price",
+          type: "GET",
+          dataType: "json",
+          data: {
+              id: id, // search term
+              percentage: $(this).val()
+            },
+          success: function(data) {
+              $("input[data-id='"+label.toString()+"'][name='extras[][price]']").val(data);
+              }
+
+          });
+       });

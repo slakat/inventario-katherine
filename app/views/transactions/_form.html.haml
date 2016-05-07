@@ -1,6 +1,28 @@
-= simple_form_for(@transaction) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :total
-  .form-actions
-    = f.button :submit
+.wizard-card
+  %ul.nav.nav-pills.nav-justified
+    %li.active
+      %a#create-trasaction-btn{"data-toggle" => "tab", :href => "#create-trasaction", class: 'text-center'} Selección
+    %li
+      %a#transaction-details-btn{"data-toggle" => "tab", :href => "#transaction-details", class: 'text-center'} Detalles
+    %li
+      %a#transaction-preview-btn{"data-toggle" => "tab", :href => "#transaction-preview", class: 'text-center'} Preview
+  .tab-content
+    #create-trasaction.tab-pane.active
+      .row.card
+        .header
+        .content
+          = simple_form_for(@transaction, method: 'post', url: '/creating-transaction', remote: true) do |f|
+            = f.error_notification
+            .form-inputs
+              = f.input :transaction_products, collection: Product.in_stock_list.order(:name), input_html: {class: 'select2', multiple: 'multiple'}
+              = f.input :transaction_services, collection: Service.all.order(:name), input_html: {class: 'select2', multiple: 'multiple'}
+              = f.input :extras, collection: ExtraProduct.for_use.order(:name), input_html: {class: 'select2', multiple: 'multiple'}
+
+            .form-actions
+              .pull-right
+                %input.btn.btn-next.btn-fill.btn-info.btn-wd.btn-sm{:name => "next", :type => "submit", :value => 'Detalles Venta', data: { disable_with: "enviando...".html_safe}}
+              .clearfix
+
+
+    #transaction-details.tab-pane
+    #transaction-preview.tab-pane

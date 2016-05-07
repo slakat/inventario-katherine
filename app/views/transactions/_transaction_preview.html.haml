@@ -1,0 +1,98 @@
+.row.card
+  .header
+    %h1.bg-success= "VENTA TOTAL: #{currency_cl transaction.total}"
+
+  .content
+    .table-responsive
+      %table.table.datatable.responsive.no-wrap.table-striped
+        %thead
+          %tr
+            %th Producto
+            %th Cantidad
+            %th Precio
+          %tbody
+            -transaction.transaction_products.each do |p|
+              %tr
+                %td= p.name
+                %td= p.quantity
+                %td= currency_cl p.price
+
+        %br/
+
+      %table.table.datatable.responsive.no-wrap.table-striped
+        %thead
+          %tr
+            %th Servicio
+            %th Precio
+          %tbody
+            -transaction.transaction_services.each do |p|
+              %tr
+                %td= p.name
+                %td= currency_cl p.price
+
+        %br/
+
+      %table.table.datatable.responsive.no-wrap.table-striped
+        %thead
+          %tr
+            %th Producto Extra
+            %th Porcentaje Usado
+            %th Precio
+          %tbody
+            -transaction.extras.each do |p|
+              %tr
+                %td= p.name
+                %td
+                  = p.quantity
+                  ="%"
+                %td= currency_cl p.price
+
+        %br/
+
+      %table.table.datatable.responsive.no-wrap.table-striped
+        %thead
+          %tr
+            %th Factura Total
+            %th
+
+          %tbody
+            %tr.success
+              %td
+                %h3 PRECIO TOTAL
+              %td
+                %h3= currency_cl transaction.total
+
+        %br/
+
+
+
+    = simple_form_for(transaction, method: 'post') do |f|
+      =f.hidden_field :total
+      - transaction.transaction_products.each do |product|
+        =fields_for 'products[]', product do |p|
+          = p.hidden_field :product_id
+          = p.hidden_field :name
+          = p.hidden_field :quantity
+          = p.hidden_field :price
+
+      - transaction.transaction_services.each do |service|
+        =fields_for 'services[]', service do |s|
+          = s.hidden_field :service_id
+          = s.hidden_field :name
+          = s.hidden_field :price
+
+      - transaction.extras.each do |extra|
+        =fields_for 'extras[]', extra do |e|
+          = e.hidden_field :extra_product_id
+          = e.hidden_field :name
+          = e.hidden_field :quantity
+          = e.hidden_field :price
+          = e.hidden_field :cost
+
+
+      .form-actions
+        .pull-right
+          %input.btn.btn-next.btn-fill.btn-info.btn-wd.btn-sm#confirmed-transaction{:name => "next", :type => "submit", :value => 'Confirmar Venta', disabled: !(transaction.total > 0), data: { disable_with: "enviando...".html_safe}}
+        .pull-left
+          %a.btn.btn-default.btn-previous{:onClick => "$('#transaction-details-btn').click()", class: 'text-center'} Atrás
+        .clearfix

@@ -24,11 +24,19 @@
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 //= require dataTables/extras/dataTables.responsive
 //= require demo
+//= require highcharts
+//= require highcharts/highcharts-more
+//= require highcharts/modules/exporting
+//= require highcharts/modules/no-data-to-display
+
 //= require_tree .
 
 
 $(document).ready(function(){
 
+    $('.select2').select2({
+            placeholder: 'Selecciona...'
+        });
 
 
 });

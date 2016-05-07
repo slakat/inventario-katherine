@@ -1,0 +1,67 @@
+
+.col-md-6
+  .card
+    .header
+      %h4.title= "Número de ventas #{Date.today.year}"
+      %p.category Cantidad de ventas realizadas
+    .content
+      #chartActivityNumber.ct-chart
+      .footer
+        %hr/
+        .stats
+          %i.fa.fa-check
+          Datos de las transacciones
+
+:javascript
+  $('#chartActivityNumber').highcharts({
+    chart: {
+      type: 'area'
+    },
+   credits:{
+            text: '',
+            href: '',
+            display:'none'
+          },
+    title: {
+      text: 'Número de Ventas del año'
+    },
+    subtitle: {
+      text: 'Cantidad de ventas realizadas'
+    },
+    xAxis: {
+      categories: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+      tickmarkPlacement: 'on',
+      title: {
+        enabled: false
+      }
+    },
+    yAxis: {
+      title: {
+        text: 'Cantidad'
+      },
+      labels: {
+        formatter: function () {
+          return this.value;
+        }
+      }
+    },
+    tooltip: {
+      shared: true,
+      valueSuffix: ''
+    },
+    plotOptions: {
+      area: {
+        stacking: 'normal',
+        lineColor: '#666666',
+        lineWidth: 1,
+        marker: {
+          lineWidth: 1,
+          lineColor: '#666666'
+        }
+      }
+    },
+    series: [{
+      name: 'número de ventas por mes',
+      data:  #{Transaction.array_number_sales_months_this_year}
+    }]
+    });

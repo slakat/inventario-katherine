@@ -31,11 +31,12 @@ gem "select2-rails"
 
 gem "font-awesome-rails"
 
-
+gem "highcharts-rails"
 
 group :development do
   gem 'letter_opener'
   gem 'web-console', '~> 2.0'
+  gem 'faker'
 end
 
 group :development, :test do

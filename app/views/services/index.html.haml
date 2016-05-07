@@ -1,20 +1,23 @@
 %p#notice= notice
-%h1 Listing Services
-%table
-  %thead
-    %tr
-      %th Name
-      %th Price
-      %th State
-      %th{:colspan => "3"}
-  %tbody
-    - @services.each do |service|
+%h1 Libro de Servicios ofrecidos en tienda
+.table
+  %table.table.datatable.table-striped.responsive.no-wrap
+    %thead
       %tr
-        %td= service.name
-        %td= service.price
-        %td= service.state
-        %td= link_to 'Show', service
-        %td= link_to 'Edit', edit_service_path(service)
-        %td= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' }
+        %th Nombre
+        %th Precio
+        %th Estado
+        %th
+        %th
+        %th
+    %tbody
+      - @services.each do |service|
+        %tr
+          %td= service.name
+          %td= currency_cl service.price
+          %td= service.state
+          %td= link_to 'Show', service
+          %td= link_to 'Edit', edit_service_path(service)
+          %td= link_to 'Destroy', service, method: :delete, data: { confirm: '¿Quieres eliminarlo?' }
 %br/
-= link_to 'New Service', new_service_path
+= link_to 'Nuevo Servicio', new_service_path

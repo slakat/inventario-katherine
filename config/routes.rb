@@ -1,12 +1,23 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  get 'reports', to: 'reports#index'
+
+  get 'reports/download'
+
   resources :transactions
   resources :categories
   resources :formulas
   resources :products
+  resources :extra_products
   resources :services
-  root 'home#index'
+  root 'reports#index'
+
+  post '/creating-transaction', to: 'transactions#creating_transaction'
+  post '/transaction-details', to: 'transactions#transaction_details'
+  post '/transaction-preview', to: 'transactions#transaction_preview'
+  get '/product-price', to: 'products#product_price'
+  get '/extra-price', to: 'extra_products#extra_price'
 
   devise_for :users
 

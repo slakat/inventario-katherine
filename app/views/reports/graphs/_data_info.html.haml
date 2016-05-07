@@ -1,0 +1,36 @@
+- ventas = Transaction.array_total_months_this_year.inject(0){|sum,x| sum + x }
+- costos = TransactionProduct.cost_sold_products + Extra.cost_sold_products
+.col-md-6
+  .card
+    .header
+      %h4.title Información
+      %p.category
+    .content
+      .table-full-width
+        %table.table
+          %tbody
+            %tr
+              %td Productos en Stock
+              %td= Product.in_stock
+            %tr
+              %td Productos en uso
+              %td= ExtraProduct.in_use
+            %tr
+              %td Productos Vendidos
+              %td= TransactionProduct.sold_products
+
+
+      .table-full-width
+        %table.table
+          %tbody
+            %tr
+              %td Ventas del año
+              %td= currency_cl ventas
+            %tr
+              %td Costos aproximados del año
+              %td= currency_cl costos
+            %tr
+              %td Ganancias aproximadas
+              %td= currency_cl(ventas-costos)
+
+

@@ -1,27 +1,27 @@
 %p#notice= notice
-%h1 Inventario -  Productos
+%h1 Inventario - Productos para usar en tienda
 .table
   %table.table.datatable.table-striped.responsive.no-wrap
     %thead
       %tr
-        %th Nombre
+        %th name
         %th Cantidad
         %th Precio
-        %th Estado
         %th Costo
+        %th Estado
         %th
         %th
         %th
     %tbody
       - @products.each do |product|
         %tr
-          %td= link_to product.name, product
-          %td= product.quantity
+          %td= product.name
+          %td= currency_cl product.quantity
           %td= currency_cl product.price
-          %td= product.state
           %td= currency_cl product.cost
-          %td= link_to 'Usar en Tienda', '#'
+          %td= product.state
+          %td= link_to 'Show', product
           %td= link_to 'Edit', edit_product_path(product)
           %td= link_to 'Destroy', product, method: :delete, data: { confirm: '¿quieres borrarlo?' }
 %br/
-= link_to 'Agregar producto', new_product_path
+= link_to 'Nuevo Producto Extra', new_extra_product_path

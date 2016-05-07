@@ -11,13 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160413165506) do
+ActiveRecord::Schema.define(version: 20160506174606) do
 
   create_table "products", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.string   "nature",     limit: 255
     t.integer  "cost",       limit: 4
     t.integer  "price",      limit: 4
     t.string   "state",      limit: 255
+    t.integer  "quantity",   limit: 4
+    t.string   "code",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,6 +28,35 @@ ActiveRecord::Schema.define(version: 20160413165506) do
   create_table "categories", force: :cascade do |t|
     t.string  "name",       limit: 255
     t.integer "product_id", limit: 4, foreign_key: {references: "products", name: "fk_categories_product_id", on_update: :restrict, on_delete: :restrict}, index: {name: "index_categories_on_product_id", using: :btree}
+  end
+
+  create_table "extra_products", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "nature",     limit: 255
+    t.integer  "cost",       limit: 4
+    t.integer  "price",      limit: 4
+    t.string   "state",      limit: 255
+    t.integer  "quantity",   limit: 4
+    t.string   "code",       limit: 255
+    t.integer  "product_id", limit: 4, foreign_key: {references: "products", name: "fk_extra_products_product_id", on_update: :restrict, on_delete: :restrict}, index: {name: "fk_extra_products_product_id", using: :btree}
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer  "total",      limit: 4
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "extras", force: :cascade do |t|
+    t.integer "price",            limit: 4
+    t.integer "quantity",         limit: 4
+    t.string  "nature",           limit: 255
+    t.string  "name",             limit: 255
+    t.integer "cost",             limit: 4
+    t.integer "extra_product_id", limit: 4, foreign_key: {references: "extra_products", name: "fk_extras_extra_product_id", on_update: :restrict, on_delete: :restrict}, index: {name: "fk_extras_extra_product_id", using: :btree}
+    t.integer "transaction_id",   limit: 4, foreign_key: {references: "transactions", name: "fk_extras_transaction_id", on_update: :restrict, on_delete: :restrict}, index: {name: "fk_extras_transaction_id", using: :btree}
   end
 
   create_table "formulas", force: :cascade do |t|
@@ -38,10 +70,12 @@ ActiveRecord::Schema.define(version: 20160413165506) do
     t.string  "state", limit: 255
   end
 
-  create_table "transactions", force: :cascade do |t|
-    t.integer  "total",      limit: 4
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "transaction_products", force: :cascade do |t|
+    t.integer "price",          limit: 4
+    t.string  "name",           limit: 255
+    t.integer "transaction_id", limit: 4, foreign_key: {references: "transactions", name: "fk_transaction_products_transaction_id", on_update: :restrict, on_delete: :restrict}, index: {name: "fk_transaction_products_transaction_id", using: :btree}
+    t.integer "product_id",     limit: 4, foreign_key: {references: "products", name: "fk_transaction_products_product_id", on_update: :restrict, on_delete: :restrict}, index: {name: "fk_transaction_products_product_id", using: :btree}
+    t.integer "quantity",       limit: 4
   end
 
   create_table "transaction_services", force: :cascade do |t|
